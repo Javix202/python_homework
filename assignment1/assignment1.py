@@ -20,6 +20,10 @@ def calc(a, b, operation="multiply"):
                 return a / b
             case "modulo":
                 return a % b
+            case "int_divide":
+                return a // b
+            case "power":
+                return a ** b
             case _:
                 return "Invalid operation."
     except ZeroDivisionError:
@@ -62,7 +66,10 @@ def grade(*args):
 
 # Task 6
 def repeat(text, number):
-    return text * number
+    result = ""
+    for _ in range(number):
+        result += text
+    return result
 
 # Task 7
 def student_scores(mode, **kwargs):
