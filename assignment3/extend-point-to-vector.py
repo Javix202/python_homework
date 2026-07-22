@@ -21,7 +21,6 @@ class Vector(Point):
     def __add__(self, other):
         return Vector(self.x + other.x, self.y + other.y)
 
-# Demo
 p1 = Point(1, 2)
 p2 = Point(4, 6)
 print(p1, p2, p1.distance(p2))

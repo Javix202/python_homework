@@ -15,7 +15,7 @@ def return_string():
     return "not a number"
 
 y = return_int()
-print(type(y).__name__) 
+print(type(y).__name__)
 
 try:
     y = return_string()

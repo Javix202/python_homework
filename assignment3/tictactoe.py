@@ -70,9 +70,11 @@ class Board:
         if not win:
             return (False, f"{self.turn}'s turn.")
         else:
-            return (True, "X wins!" if self.turn == "O" else "O wins!")
+            if self.turn == "O":
+                return (True, "X has won")
+            else:
+                return (True, "O has won")
 
-# Game loop
 board = Board()
 print(board)
 
