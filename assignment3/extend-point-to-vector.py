@@ -15,16 +15,28 @@ class Point:
         return math.sqrt((self.x - other.x)**2 + (self.y - other.y)**2)
 
 class Vector(Point):
+
     def __str__(self):
-        return f"Vector<{self.x}, {self.y}>"
+        return f"<Vector: {self.x}, {self.y}>"
 
     def __add__(self, other):
         return Vector(self.x + other.x, self.y + other.y)
 
+
+
 p1 = Point(1, 2)
 p2 = Point(4, 6)
-print(p1, p2, p1.distance(p2))
+
+print("Points:")
+print(" p1 =", p1)
+print(" p2 =", p2)
+print(" p1 == p2:", p1 == p2)
+print(" distance:", p1.distance(p2))
 
 v1 = Vector(1, 1)
 v2 = Vector(2, 3)
-print(v1, v2, v1 + v2)
+
+print("\nVectors:")
+print(" v1 =", v1)
+print(" v2 =", v2)
+print(" v1 + v2 =", v1 + v2)

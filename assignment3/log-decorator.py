@@ -7,12 +7,15 @@ logger.addHandler(logging.FileHandler("./decorator.log", "a"))
 def logger_decorator(func):
     def wrapper(*args, **kwargs):
         result = func(*args, **kwargs)
+
         pos = list(args) if args else "none"
         key = dict(kwargs) if kwargs else "none"
+
         logger.info(f"function: {func.__name__}")
         logger.info(f"positional parameters: {pos}")
         logger.info(f"keyword parameters: {key}")
         logger.info(f"return: {result}")
+
         return result
     return wrapper
 
